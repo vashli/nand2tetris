@@ -1,0 +1,9 @@
+CHIP NG {
+	IN in[16];
+	OUT out;
+
+	PARTS:
+		Not(in=in[15], out=in0);
+		And(a=in[15], b=in0, out=zero);
+		Or(a=in[15], b=zero, out=out);
+}
