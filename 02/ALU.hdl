@@ -49,9 +49,8 @@ CHIP ALU {
         Add16(a=x1, b=y1, out=add);
         And16(a=x1, b=y1, out=and);
         Mux16(a=and, b=add, sel=f, out=out0);
-        Negate(in=out0, nx=no, out=out);
+        Negate(in=out0, nx=no, out=out, out=out1);
         
-        Negate(in=out0, nx=no, out=out1);
         ZR(in=out1, out=zr);
         NG(in=out1, out=ng);
 }
